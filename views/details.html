@@ -1,0 +1,71 @@
+<md-dialog aria-label="Mango (Fruit)">
+    <form ng-cloak>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{movie.title}}</h2>
+                <md-tooltip>Click Outside To Close</md-tooltip>
+            </div>
+        </md-toolbar>
+
+        <md-dialog-content>
+
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="Movie Details">
+                    <md-content class="md-padding">
+                        <div layout="row" layout-align="space-between" style="font-size: 16px;">
+                            <div flex="25">
+                                <img src="{{'http://image.tmdb.org/t/p/w300' + movie.poster_path}}" alt="">
+                            </div>
+                            <div flex="75">
+                                <div><span class="details-title">Release Date: </span>{{movie.release_date}}</div>
+                                <md-divider></md-divider>
+                                <div><span class="details-title"> Rating: </span>{{movie.vote_average}}/10</div>
+                                <md-divider></md-divider>
+                                <div>
+                                    <span class="details-title">Genres: </span>
+                                    <span ng-repeat-start="g in genreNames">{{g}},</span>
+                                    <span ng-repeat-end>{{g}}</span>
+                                </div>
+                                <md-divider></md-divider>
+                                <div>
+                                    <span class="details-title">Overview</span>
+                                    <p style="margin:0">{{movie.overview}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Trailer">
+                    <md-content class="md-padding">
+                        <ng-youtube-embed video="trailerSrc" autoplay="true" color="white" disablekb="true" width="1000px" height="500px">
+                        </ng-youtube-embed>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Reviews">
+                    <md-content style="min-width: 500px" class="md-padding">
+                        <div ng-if="reviews" ng-repeat="r in reviews">
+                            <span style="font-weight: 700">{{r.author}}</span>
+                            <p>{{r.content}}</p>
+                            <md-divider style="padding-bottom: 20px;"></md-divider>
+                        </div>
+                        <p ng-if="reviews==false" style="width: 100%; text-align: center;">Sorry, there are no reviews</p>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Similar Movies">
+                    <md-content style="min-width: 500px" class="md-padding">
+                        <div layout="row" layout-align="space-between center">
+                            <div ng-repeat="s in similar">
+                                <img style="height: 90%;" ng-src="{{'http://image.tmdb.org/t/p/w300' + s.poster_path}}" alt="movie photo">
+                            </div>
+                        </div>
+                        <p ng-if="similar==false" style="width: 100%; text-align: center;">Sorry, there are no similar movies
+                            listed</p>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+
+
+        </md-dialog-content>
+
+    </form>
+</md-dialog>
