@@ -1,5 +1,5 @@
 # MovieRama
-> A simple SPA on AngularJS using The Movie Database (TMDb) API. Based on Google's [Material Design for AngularJS](https://material.angularjs.org/latest/). Read below to setup. UI heavily inspired by Netflix's [webapp](https://www.netflix.com/).
+> A simple SPA on AngularJS using The Movie Database (TMDb) API. Based on Google's [Material Design for AngularJS](https://material.angularjs.org/latest/). Read below to setup or [visit](https://almpertis.github.io) directly. UI heavily inspired by Netflix's [webapp](https://www.netflix.com/).
 
 ## What's inside?
 * AngularJS
