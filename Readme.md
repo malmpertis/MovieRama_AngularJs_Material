@@ -7,9 +7,8 @@
 
 
 ## Easy Way to Run
-- npm install -g http-server
-- After installation cd into project's folder and run http-server -o. -o is to open browser to the page.
-- http-server -o
+- npm install
+- npm start
 
 
 ## License
