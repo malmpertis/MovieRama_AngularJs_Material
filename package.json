@@ -1,0 +1,15 @@
+{
+  "name": "movierama",
+  "version": "1.0.0",
+  "description": "> A simple SPA on AngularJS using The Movie Database (TMDb) API. Based on Google's [Material Design for AngularJS](https://material.angularjs.org/latest/). Read below to setup or visit the [app](https://almpertis.github.io) directly. UI heavily inspired by [Netflix](https://www.netflix.com/).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
